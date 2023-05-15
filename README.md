@@ -1,7 +1,7 @@
 # airflow
 
 
-
+```
 python3 --version
 python3 -m venv py_env
 source py_env/bin/activate
@@ -23,5 +23,5 @@ pip install 'apache-airflow==2.6.0' \
  airflow users create --username admin --firstname firstname --lastname lastname --role Admin --email admin@domain.com
  
 
-
+```
  
