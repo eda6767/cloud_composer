@@ -13,3 +13,5 @@ pip install 'apache-airflow==2.6.0' \
  export AIRFLOW_HOME=.
  airflow db init
  
+ airflow webserver -p 8080
+ 
