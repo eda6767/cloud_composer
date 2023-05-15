@@ -38,5 +38,7 @@ pip install 'apache-airflow==2.6.0' \
 
 <img width="1428" alt="Zrzut ekranu 2023-05-15 o 13 02 47" src="https://github.com/eda6767/airflow/assets/102791467/c7c00d7e-487e-4493-aa85-639726f92d5e">
 
+<img width="1390" alt="Zrzut ekranu 2023-05-15 o 22 03 34" src="https://github.com/eda6767/airflow/assets/102791467/7a53da25-cd9e-438d-b9c9-9172ee925896">
+
 
 
