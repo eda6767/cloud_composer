@@ -77,7 +77,8 @@ pip install 'apache-airflow==2.6.0' \
  
  <img width="1428" alt="Zrzut ekranu 2023-05-21 o 20 50 22" src="https://github.com/eda6767/airflow/assets/102791467/bb2c2639-4452-4b31-99a4-7cea98152ed4">
 
- 
+ ##### After successfully completed task we should received DAG with status finished. Furthermore all instances used to running pipeline on dataproc should be deleted. 
 
+<img width="1415" alt="Zrzut ekranu 2023-05-21 o 21 15 08" src="https://github.com/eda6767/airflow/assets/102791467/47b204b4-e302-4699-b112-f981755cb6af">
 
 
