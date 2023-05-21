@@ -62,13 +62,22 @@ pip install 'apache-airflow==2.6.0' \
 <br>
 
 <img width="1428" alt="Zrzut ekranu 2023-05-15 o 22 07 41" src="https://github.com/eda6767/airflow/assets/102791467/8c9ed6a1-7ec3-4b48-a03d-4605a27fff6d">
+ 
+ 
+ 
+##### In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define connection in Airflow. For this purpose we are selecting Admin/ Connections.
+ 
+<img width="1051" alt="Zrzut ekranu 2023-05-21 o 20 46 49" src="https://github.com/eda6767/airflow/assets/102791467/ba426fd5-0d06-4f97-a0eb-b0e2e9e0fadb">
 
+ ##### For create needed connection we have to define a name - the same name will be used in DAG python file; option - Google Cloud and for Keyfile JSON File we will pass values from json generated for Service Account. Notice, that particular service account has to have permission required to viewing and selecting data from BigQuery.
 
+ <img width="1394" alt="Zrzut ekranu 2023-05-21 o 20 49 45" src="https://github.com/eda6767/airflow/assets/102791467/3dd1c0ae-2e1f-4d8d-bb4b-53dad1ac116a">
 
+ #####  After finishing configuration, before saving I recommend to test the connection. In case of success we can finally save created configuration. Now this connection will be used with BigQueryHook method in DAGs.
+ 
+ <img width="1428" alt="Zrzut ekranu 2023-05-21 o 20 50 22" src="https://github.com/eda6767/airflow/assets/102791467/bb2c2639-4452-4b31-99a4-7cea98152ed4">
 
-```bash
-[2023-05-15T18:14:19.205+0000] {taskinstance.py:1402} INFO - Marking task as FAILED. dag_id=PROCEDURE, task_id=branching, execution_date=20230513T000000, start_date=20230515T181417, end_date=20230515T181419
-[2023-05-15T18:14:19.236+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 7 for task branching (403 POST https://bigquery.googleapis.com/bigquery/v2/projects/clean-sylph-377411/jobs?prettyPrint=false: Access Denied: Project clean-sylph-377411: User does not have bigquery.jobs.create permission in project clean-sylph-377411.
-```
+ 
+
 
 
