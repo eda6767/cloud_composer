@@ -1,7 +1,8 @@
 # Apache Airflow
 
+<div style="background-color: rgb(50, 50, 50);">
 
-```
+```bash
 python3 --version
 python3 -m venv py_env
 source py_env/bin/activate
@@ -65,7 +66,7 @@ pip install 'apache-airflow==2.6.0' \
 
 
 
-```
+```bash
 [2023-05-15T18:14:19.205+0000] {taskinstance.py:1402} INFO - Marking task as FAILED. dag_id=PROCEDURE, task_id=branching, execution_date=20230513T000000, start_date=20230515T181417, end_date=20230515T181419
 [2023-05-15T18:14:19.236+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 7 for task branching (403 POST https://bigquery.googleapis.com/bigquery/v2/projects/clean-sylph-377411/jobs?prettyPrint=false: Access Denied: Project clean-sylph-377411: User does not have bigquery.jobs.create permission in project clean-sylph-377411.
 ```
