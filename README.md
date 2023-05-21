@@ -26,6 +26,11 @@ pip install 'apache-airflow==2.6.0' \
 
 # Apache Airflow - Cloud Composer on GCP
 
+In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, 
+running pipeline and shutting down container. This solution also will check if this is first time when you run pipeline for given date or it is second time - then deleting data is executed.
+
+
+
 <img width="1275" alt="Zrzut ekranu 2023-05-15 o 13 01 18" src="https://github.com/eda6767/airflow/assets/102791467/a4aea114-af3a-4dbe-80c4-661ca03ba420">
 
 
