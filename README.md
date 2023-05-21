@@ -26,7 +26,7 @@ pip install 'apache-airflow==2.6.0' \
 
 # Apache Airflow - Cloud Composer on GCP
 
-######  In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, running pipeline and shutting down container. This solution also will check if this is the first time when you run pipeline for given date or it is second time - then deleting data is executed.
+#####  In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, running pipeline and shutting down container. This solution also will check if this is the first time when you run pipeline for given date or it is second time - then deleting data is executed.
 
 
 
@@ -40,7 +40,7 @@ pip install 'apache-airflow==2.6.0' \
 <img width="689" alt="Zrzut ekranu 2023-05-15 o 13 02 11" src="https://github.com/eda6767/airflow/assets/102791467/a0574b3d-8478-4c6e-903b-a0081ca981b2">
 
 
-###### After as environments has been created we can check DAG list, logs, DAG folder and also Aifrlow webserver. 
+##### After as environments has been created we can check DAG list, logs, DAG folder and also Aifrlow webserver. 
 
 <br>
 
@@ -49,12 +49,12 @@ pip install 'apache-airflow==2.6.0' \
 
 <br>
 
-###### Now, we have to define first DAG. For this purpose we have to copy python file to DAG folder. This can be done throught console  or throught cloud shell. :shipit: 
+##### Now, we have to define first DAG. For this purpose we have to copy python file to DAG folder. This can be done throught console  or throught cloud shell. :shipit: 
 
 <br><img width="1374" alt="Zrzut ekranu 2023-05-21 o 20 30 23 kopia" src="https://github.com/eda6767/airflow/assets/102791467/06cb2330-ba95-445d-855c-1cb53ef0605d">
 
 
-##### After defining first dag, we are able to view a diagram in DAG list, in diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using branching which will check if there is the first running pipeline, or second, what means that we need to delete data from partition on BigQuery destination table. After this DAG creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster.
+##### After defining first dag, we are able to view a diagram in DAG list, in diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using branching which will check if there is the first running pipeline, or second, what means that we need to delete data from partition on BigQuery destination table. Afterward DAG creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster.
 
 
 
