@@ -42,6 +42,7 @@ As a first step we will create Composer Environment. For this purpose we will se
 
 
 After as environments has been created we can check DAG list, logs, DAG folder and also Aifrlow webserver.
+Now, we have to define first DAG. For this purpose we have to copy python file to DAG folder. This can be done throught console or throught cloud shell.
 
 
 <img width="1428" alt="Zrzut ekranu 2023-05-15 o 13 02 47" src="https://github.com/eda6767/airflow/assets/102791467/c7c00d7e-487e-4493-aa85-639726f92d5e">
