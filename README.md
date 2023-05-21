@@ -56,6 +56,9 @@ Now, we have to define first DAG. For this purpose we have to copy python file t
 <img width="1428" alt="Zrzut ekranu 2023-05-15 o 22 07 41" src="https://github.com/eda6767/airflow/assets/102791467/8c9ed6a1-7ec3-4b48-a03d-4605a27fff6d">
 
 
-
+```
+[2023-05-15T18:14:19.205+0000] {taskinstance.py:1402} INFO - Marking task as FAILED. dag_id=PROCEDURE, task_id=branching, execution_date=20230513T000000, start_date=20230515T181417, end_date=20230515T181419
+[2023-05-15T18:14:19.236+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 7 for task branching (403 POST https://bigquery.googleapis.com/bigquery/v2/projects/clean-sylph-377411/jobs?prettyPrint=false: Access Denied: Project clean-sylph-377411: User does not have bigquery.jobs.create permission in project clean-sylph-377411.
+```
 
 
