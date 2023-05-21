@@ -12,13 +12,10 @@ pip install 'apache-airflow==2.6.0' \
  
  export AIRFLOW_HOME=.
  airflow db init
- 
  airflow webserver -p 8080
- 
  
  export AIRFLOW_HOME=~/airflow
  airflow webserver -p 8080
- 
  
  airflow users create --username admin --firstname firstname --lastname lastname --role Admin --email admin@domain.com
  
