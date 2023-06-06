@@ -9,7 +9,7 @@ source py_env/bin/activate
 
 https://github.com/apache/airflow 
 pip install 'apache-airflow==2.6.0' \
- --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.10.txt
+ --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.10.txt"
  
  export AIRFLOW_HOME=.
  airflow db init
