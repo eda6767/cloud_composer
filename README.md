@@ -32,6 +32,7 @@ pip install 'apache-airflow==2.6.0' \
  mkdir -p ./dags ./logs ./plugins ./config
  
  docker compose up airflow-init
+ docker compose up -d
  
 ```
  
