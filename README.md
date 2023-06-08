@@ -31,6 +31,7 @@ pip install 'apache-airflow==2.6.0' \
  curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.6.1/docker-compose.yaml'
  mkdir -p ./dags ./logs ./plugins ./config
  
+ docker compose up airflow-init
  
 ```
  
