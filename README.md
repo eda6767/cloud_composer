@@ -25,6 +25,9 @@ pip install 'apache-airflow==2.6.0' \
  source py_env/bin/activate
  airflow scheduler
  
+ docker --version
+ docker-compose --version
+ 
 ```
  
 
