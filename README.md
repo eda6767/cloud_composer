@@ -21,6 +21,10 @@ pip install 'apache-airflow==2.6.0' \
  airflow users create --username admin --firstname firstname --lastname lastname --role Admin --email admin@domain.com
  
 
+ export AIRFLOW_HOME=.
+ source py_env/bin/activate
+ airflow scheduler
+ 
 ```
  
 
