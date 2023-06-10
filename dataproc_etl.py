@@ -2,7 +2,7 @@
 """
 Created on Thu May 11 10:44:02 2023
 
-@author: S1610484
+@author: edytakorba
 """
 from datetime import timedelta, datetime
 from airflow import DAG 
@@ -22,10 +22,10 @@ from airflow.operators.python import BranchPythonOperator
 
 GOOGLE_CONN_ID = "google_cloud_default"
 PROJECT_ID="clean-sylph-377411"
-BUCKET_NAME = 'dataproc_mcc_proc'
+BUCKET_NAME = 'dataproc_proc'
 CLUSTER_NAME = 'dataproc-cluster'
 REGION = 'europe-west1'
-PYSPARK_URI = 'gs://dataproc_mcc_proc/dataproc.py'
+PYSPARK_URI = 'gs://dataproc_proc/dataproc.py'
 DATASET = 'clean-sylph-377411.agr'
 TABLE = 'dpcrnt_acct_trx_fcd'
 DATE_ID='2021-10-31'
