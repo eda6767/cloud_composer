@@ -1,41 +1,5 @@
-# Apache Airflow - on premise and on Google Cloud Platform 
+# Apache Airflow -  on Google Cloud Platform 
 
-<div style="background-color: rgb(50, 50, 50);">
-
-```bash
-python3 --version
-python3 -m venv py_env
-source py_env/bin/activate
-
-https://github.com/apache/airflow 
-pip install 'apache-airflow==2.6.0' \
- --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.10.txt"
- 
- export AIRFLOW_HOME=.
- airflow db init
- airflow webserver -p 8080
- 
- export AIRFLOW_HOME=~/airflow
- airflow webserver -p 8080
- 
- airflow users create --username admin --firstname firstname --lastname lastname --role Admin --email admin@domain.com
- 
-
- export AIRFLOW_HOME=.
- source py_env/bin/activate
- airflow scheduler
- 
- docker --version
- docker-compose --version
- 
- curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.6.1/docker-compose.yaml'
- mkdir -p ./dags ./logs ./plugins ./config
- 
- docker compose up airflow-init
- docker compose up -d
- 
-```
- 
 
 
 # Apache Airflow - Cloud Composer on GCP
