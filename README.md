@@ -1,6 +1,7 @@
 # Apache Airflow -  on Google Cloud Platform 
 
 
+<sub>
 
 # Apache Airflow - Cloud Composer on GCP
 
@@ -59,3 +60,4 @@
 <img width="1415" alt="Zrzut ekranu 2023-05-21 o 21 15 08" src="https://github.com/eda6767/airflow/assets/102791467/47b204b4-e302-4699-b112-f981755cb6af">
 
 
+</sub>
