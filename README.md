@@ -6,36 +6,33 @@
 <p align="center">
 <img width="457" alt="Zrzut ekranu 2023-09-24 o 19 51 41" src="https://github.com/eda6767/dataproc/assets/102791467/a908775d-c855-4d84-af52-21b8c41acad6">
 
-</p>
 
 
-<p align="center">
 
 <img width="650" alt="Zrzut ekranu 2023-09-24 o 20 28 15" src="https://github.com/eda6767/cloud_composer/assets/102791467/42d44c7c-ff83-4e6e-a3f6-2dfd77e43d59">
 
 
-</p>
+
 
 
 In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, 
 <br/> 
 
-running pipeline and shutting down container. 
-<br/> 
-
-This solution also will check if this is the first time when you run pipeline for given date or it is second time - then deleting data is executed.
-<br/> 
-<br/> 
-<br/> 
-<br/> 
-
-
-
+running pipeline and shutting down container. This solution also will check if this is the first time when you run pipeline for given
 
 <br/> 
-<p align="center">
+date or it is second time - then deleting data is executed.
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+
+
+
+
+<br/> 
 <img width="700" alt="Zrzut ekranu 2023-05-15 o 13 01 18" src="https://github.com/eda6767/airflow/assets/102791467/a4aea114-af3a-4dbe-80c4-661ca03ba420">
-</p>
+
 
 
 As a first step we will create Composer Environment. For this purpose we will set the minimum number of nodes which is - 3, and n1-stanard-1 as a machine type.
