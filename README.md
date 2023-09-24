@@ -3,7 +3,15 @@
 
 <sub/>
 
-In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, running pipeline and shutting down container. 
+<p align="center">
+<img width="457" alt="Zrzut ekranu 2023-09-24 o 19 51 41" src="https://github.com/eda6767/dataproc/assets/102791467/a908775d-c855-4d84-af52-21b8c41acad6">
+
+</p>
+
+In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, 
+<br/> 
+
+running pipeline and shutting down container. 
 <br/> 
 
 This solution also will check if this is the first time when you run pipeline for given date or it is second time - then deleting data is executed.
