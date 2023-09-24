@@ -4,10 +4,6 @@
 <sub/>
 
 <p align="center">
-<img width="457" alt="Zrzut ekranu 2023-09-24 o 19 51 41" src="https://github.com/eda6767/dataproc/assets/102791467/a908775d-c855-4d84-af52-21b8c41acad6">
-
-
-
 
 <img width="650" alt="Zrzut ekranu 2023-09-24 o 20 28 15" src="https://github.com/eda6767/cloud_composer/assets/102791467/42d44c7c-ff83-4e6e-a3f6-2dfd77e43d59">
 
