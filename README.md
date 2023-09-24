@@ -8,6 +8,15 @@
 
 </p>
 
+
+<p align="center">
+
+<img width="881" alt="Zrzut ekranu 2023-09-24 o 20 28 15" src="https://github.com/eda6767/cloud_composer/assets/102791467/42d44c7c-ff83-4e6e-a3f6-2dfd77e43d59">
+
+
+</p>
+
+
 In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, 
 <br/> 
 
