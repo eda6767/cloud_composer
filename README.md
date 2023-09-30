@@ -78,7 +78,10 @@ creates cluster with given parameters, runs main ETL pipeline, and then deletes 
 <br/> 
 <br/> 
  
-In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define connection in Airflow. For this purpose we are selecting Admin/ Connections.
+In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define 
+<br/> 
+
+connection in Airflow. For this purpose we are selecting Admin/ Connections.
 <br/> 
 <br/> 
 
