@@ -78,10 +78,7 @@ creates cluster with given parameters, runs main ETL pipeline, and then deletes 
 <br/> 
 <br/> 
  
-In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define connection in Airflow. For this purpose we are 
-<br/> 
-
-selecting Admin/ Connections.
+In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define connection in Airflow. For this purpose we are selecting Admin/ Connections.
 <br/> 
 <br/> 
 
@@ -106,7 +103,8 @@ json generated for Service Account. Notice, that a particular service account ha
 <br/> 
 
 <br/> 
-After finishing configuration, before saving it -  I recommend to test the connection. In case of success we can finally save created configuration. Now this connection will be used <br/> 
+After finishing configuration, before saving it -  I recommend to test the connection. In case of success we can finally save created configuration. Now this connection will be used 
+<br/> 
 
 with BigQueryHook method in DAGs.
 <br/>
