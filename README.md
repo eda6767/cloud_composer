@@ -11,13 +11,13 @@
 
 
 
-In this project we are going to create Cloud Composer environment and deploy DAG which contains creating container for Dataproc, 
+In this project we are going to create Cloud Composer environment and deploy a DAG which contains creating container for Dataproc, 
 <br/> 
 
-running pipeline and shutting down container. This solution also will check if this is the first time when you run pipeline for given
+running pipeline and shutting down a container. This solution also will check if this is the first time when you run pipeline for given
 
 <br/> 
-date or it is second time - then deleting data is executed.
+date or it is second time - then deleting data for a given data is executed.
 <br/> 
 <br/> 
 <br/> 
@@ -48,18 +48,18 @@ After as environments has been created we can check DAG list, logs, DAG folder a
 </p>
 <br>
 
-Now, we have to define first DAG. For this purpose we have to copy python file to DAG folder. This can be done throught console  or throught cloud shell. :shipit: 
+Now, we have to define first DAG. For this purpose we have to copy python file to a DAG folder. This can be done throught console  or throught cloud shell. :shipit: 
 
 <br><img width="1374" alt="Zrzut ekranu 2023-05-21 o 20 30 23 kopia" src="https://github.com/eda6767/airflow/assets/102791467/06cb2330-ba95-445d-855c-1cb53ef0605d">
 
 
-After defining first dag, we are able to view a diagram in DAG list, in diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using 
+After defining first dag, we are able to view a diagram in DAG list, in the diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using 
 <br/> 
 
-branching which will check if there is the first running pipeline, or second, what means that we need to delete data from partition on BigQuery destination table. Afterward DAG 
+branching which will check if this is the first running pipeline, or second, what means that we need to delete data from partition from BigQuery destination table. Afterward DAG 
 <br/> 
 
-creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster.
+creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster after finished process.
 
 
 
@@ -83,7 +83,7 @@ selecting Admin/ Connections.
 
 For create needed connection we have to define a name - the same name will be used in DAG python file; option - Google Cloud and for Keyfile JSON File we will pass values from <br/>  
 
-json generated for Service Account. Notice, that particular service account has to have permission required to viewing and selecting data from BigQuery.
+json generated for Service Account. Notice, that a particular service account has to have permission required to viewing and selecting data from BigQuery.
 
 <br/> <br/> 
 
@@ -93,7 +93,7 @@ json generated for Service Account. Notice, that particular service account has 
 </p>
 
 
-After finishing configuration, before saving I recommend to test the connection. In case of success we can finally save created configuration. Now this connection will be used <br/> 
+After finishing configuration, before saving it -  I recommend to test the connection. In case of success we can finally save created configuration. Now this connection will be used <br/> 
 
 with BigQueryHook method in DAGs.
 <br/>
@@ -104,7 +104,7 @@ with BigQueryHook method in DAGs.
 <img width="600" alt="Zrzut ekranu 2023-05-21 o 20 50 22" src="https://github.com/eda6767/airflow/assets/102791467/bb2c2639-4452-4b31-99a4-7cea98152ed4">
 </p>
 
-After successfully completed task we should received DAG with status finished. Furthermore all instances used for running pipeline on dataproc should be deleted. 
+After successfully completed task we should receive DAG with a status finished. Furthermore all instances used for running pipeline on dataproc should be deleted. 
 <br/> 
 <br/> 
 
