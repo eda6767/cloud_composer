@@ -1,38 +1,26 @@
 
 # Apache Airflow - Cloud Composer on GCP
 
-<sub/>
 
 <p align="center">
-
 <img width="650" alt="Zrzut ekranu 2023-09-24 o 20 28 15" src="https://github.com/eda6767/cloud_composer/assets/102791467/42d44c7c-ff83-4e6e-a3f6-2dfd77e43d59">
+</p>
 
-<br/> 
-<br/> 
-
-
-
-In this project we are going to create Cloud Composer environment and deploy a DAG which contains creating container for Dataproc, 
+<br> 
 <br/> 
 
-running pipeline and shutting down a container. This solution also will check if this is the first time when you run pipeline for given
-<br/> 
+<sub> In this project we are going to create Cloud Composer environment and deploy a DAG which contains creating container for Dataproc, running pipeline and shutting down a container. This solution also will check if this is the first time when you run pipeline for given date or it is second time - then deleting data for a given data is executed. </sub> 
 
-date or it is second time - then deleting data for a given data is executed.
+<br> 
 <br/> 
-<br/> 
-<br/> 
-<br/> 
-
-
-
-
-<br/> 
+<p align="center">
 <img width="700" alt="Zrzut ekranu 2023-05-15 o 13 01 18" src="https://github.com/eda6767/airflow/assets/102791467/a4aea114-af3a-4dbe-80c4-661ca03ba420">
+</p>
+<br> 
+<br/> 
 
 
-
-As a first step we will create Composer Environment. For this purpose we will set the minimum number of nodes which is - 3, and n1-stanard-1 as a machine type.
+<sub>  As a first step we will create Composer Environment. For this purpose we will set the minimum number of nodes which is - 3, and n1-stanard-1 as a machine type. </sub> 
 
 <br/> 
 <br/> 
