@@ -64,7 +64,7 @@ start_pipeline = DummyOperator(
 
 </sub>
 
-<sub> Second step is veryfing if current process is running first time - if not - we have to first delete data from destination table before ingesting again data into it. For this we need to check if there are records in given table for given date. For this we are using _BranchPythonOperator_ </sub>
+<sub> Second step is veryfing if current process is running first time - if not - we have to first delete data from destination table before ingesting again data into it. For this we need to check if there are records in given table for given date. For this we are using the operator _BranchPythonOperator_  which runs big_query_check functions running query from  SQL_QUERY variable. </sub>
 
 
 <sub>
@@ -77,17 +77,28 @@ start_pipeline = DummyOperator(
         templates_dict = {"sql": sql}
         )
 ```
+</sub>
 
- </sub>
-<sub> After defining first dag, we are able to view a diagram in DAG list, in the diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using branching which will check if this is the first running pipeline, or second, what means that we need to delete data from partition from BigQuery destination table. Afterward DAG creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster after finished process. </sub>
-<br> 
-<br/> 
 
-<p align="center">
-<img width="600" alt="Zrzut ekranu 2023-05-15 o 22 07 41" src="https://github.com/eda6767/airflow/assets/102791467/8c9ed6a1-7ec3-4b48-a03d-4605a27fff6d">
-</p>
-<br> 
-<br/> 
+<sub> 
+
+```
+SQL_QUERY=f"SELECT COUNT(*) FROM {DATASET}.{TABLE} WHERE DUE_DT='{DATE_ID}'"
+
+def big_query_check(**context):
+    cursor = BigQueryHook(gcp_conn_id='bigquery_default').get_conn().cursor()
+
+    #cursor.execute(SQL_QUERY)  # if non-legacy
+    cursor.job_id = cursor.run_query(sql=SQL_QUERY, use_legacy_sql=False)  # if legacy
+    result=cursor.fetchone()
+
+    if results == 0:
+        return "check_first_run"
+    else:
+        return "delete data"
+```
+</sub>
+
  
 <sub> In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define connection in Airflow. For this purpose we are selecting Admin/ Connections. </sub>
 <br> 
@@ -120,6 +131,19 @@ start_pipeline = DummyOperator(
 </p>
 <br> 
 <br/> 
+
+
+<sub> After defining first dag, we are able to view a diagram in DAG list, in the diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using branching which will check if this is the first running pipeline, or second, what means that we need to delete data from partition from BigQuery destination table. Afterward DAG creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster after finished process. </sub>
+<br> 
+<br/> 
+
+<p align="center">
+<img width="600" alt="Zrzut ekranu 2023-05-15 o 22 07 41" src="https://github.com/eda6767/airflow/assets/102791467/8c9ed6a1-7ec3-4b48-a03d-4605a27fff6d">
+</p>
+<br> 
+<br/> 
+
+
 
 
 <sub> After successfully completed task we should receive DAG with a status finished. Furthermore all instances used for running pipeline on dataproc should be deleted. </sub>
