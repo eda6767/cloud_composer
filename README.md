@@ -15,13 +15,13 @@
 <br> 
 <br/> 
 <p align="center">
-<img width="700" alt="Zrzut ekranu 2023-05-15 o 13 01 18" src="https://github.com/eda6767/airflow/assets/102791467/a4aea114-af3a-4dbe-80c4-661ca03ba420">
+<img width="800" alt="Zrzut ekranu 2023-05-15 o 13 01 18" src="https://github.com/eda6767/airflow/assets/102791467/a4aea114-af3a-4dbe-80c4-661ca03ba420">
 </p>
 <br> 
 <br/> 
 
 
-<sub>  As a first step we will create Composer Environment. For this purpose we will set the minimum number of nodes which is - 3, and n1-stanard-1 as a machine type. </sub> 
+<sub>  As a first step we will create Composer Environment. For this purpose we will set the minimum number of nodes which is 3, and n1-stanard-1 as machine type. </sub> 
 
 <br> 
 <br/> 
@@ -37,7 +37,7 @@
 <br/> 
 
 <p align="center">
-<img width="600" alt="Zrzut ekranu 2023-05-15 o 13 02 47" src="https://github.com/eda6767/airflow/assets/102791467/c7c00d7e-487e-4493-aa85-639726f92d5e">
+<img width="800" alt="Zrzut ekranu 2023-05-15 o 13 02 47" src="https://github.com/eda6767/airflow/assets/102791467/c7c00d7e-487e-4493-aa85-639726f92d5e">
 </p>
 <br> 
 <br/> 
