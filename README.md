@@ -31,13 +31,13 @@
 <br> 
 <br/> 
 
-<sub> After as environments has been created we can check DAG list, logs, DAG folder and also Aifrlow webserver. </sub>
+<sub> After as environments has been created we can check DAG list, logs, DAG folder and also Airflow webserver. </sub>
 
 <br> 
 <br/> 
 
 <p align="center">
-<img width="800" alt="Zrzut ekranu 2023-05-15 o 13 02 47" src="https://github.com/eda6767/airflow/assets/102791467/c7c00d7e-487e-4493-aa85-639726f92d5e">
+<img width="900" alt="Zrzut ekranu 2023-05-15 o 13 02 47" src="https://github.com/eda6767/airflow/assets/102791467/c7c00d7e-487e-4493-aa85-639726f92d5e">
 </p>
 <br> 
 <br/> 
@@ -49,6 +49,10 @@
 </p>
 <br> 
 <br/> 
+
+
+<sub>  Our DAG file has bounch of needed operator. Let's analyze it</sub>
+
 
 <sub> After defining first dag, we are able to view a diagram in DAG list, in the diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using branching which will check if this is the first running pipeline, or second, what means that we need to delete data from partition from BigQuery destination table. Afterward DAG creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster after finished process. </sub>
 <br> 
