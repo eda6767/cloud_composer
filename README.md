@@ -51,9 +51,34 @@
 <br/> 
 
 
-<sub>  Our DAG file has bounch of needed operator. Let's analyze it</sub>
+<sub>  Our DAG file has bounch of needed operator. Let's analyze it. First is _DummyOperator_ which indicate the start of process </sub>
+
+<sub>
+ 
+```
+start_pipeline = DummyOperator(
+        task_id = 'start_pipeline',
+        dag = dag
+        )
+```
+
+</sub>
+
+<sub> Second step is veryfing if current process is running first time - if not - we have to first delete data from destination table before ingesting again data into it. For this we need to check if there are records in given table for given date. For this we are using _BranchPythonOperator_ </sub>
 
 
+<sub>
+
+```
+ branch_task = BranchPythonOperator(
+        task_id='branching', 
+        python_callable=big_query_check,
+        provide_context= True,
+        templates_dict = {"sql": sql}
+        )
+```
+
+ </sub>
 <sub> After defining first dag, we are able to view a diagram in DAG list, in the diagram section. We have first task, which starts pipeline containing DummyOperator. Next we are using branching which will check if this is the first running pipeline, or second, what means that we need to delete data from partition from BigQuery destination table. Afterward DAG creates cluster with given parameters, runs main ETL pipeline, and then deletes dataproc cluster after finished process. </sub>
 <br> 
 <br/> 
