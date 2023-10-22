@@ -64,7 +64,7 @@ start_pipeline = DummyOperator(
 
 </sub>
 
-<sub> Second step is veryfing if current process is running first time - if not - we have to first delete data from destination table before ingesting again data into it. For this we need to check if there are records in given table for given date. For this we are using the operator _BranchPythonOperator_  which runs big_query_check functions running query from  SQL_QUERY variable. </sub>
+<sub> Second step is veryfing if current process is being run first time - if not - we have to first delete data from destination table before ingesting again data into it. For this we need to check if there are records in given table for given date. For this we are using the operator _BranchPythonOperator_  which runs big_query_check functions running query from  _SQL_QUERY_ variable. </sub>
 
 
 <sub>
@@ -100,7 +100,7 @@ def big_query_check(**context):
 </sub>
 
  
-<sub> In contract to default BigQueryValueCheckOperator, BigQueryInsertJobOperator - for using BigQueryHook method we have to define connection in Airflow. For this purpose we are selecting Admin/ Connections. </sub>
+<sub> Which is very importtant here in contrast to default _BigQueryValueCheckOperator_ , _BigQueryInsertJobOperator_ - for using _BigQueryHook_ method we have to define a new connection in Airflow. For this purpose we are selecting Admin/ Connections. </sub>
 <br> 
 <br/> 
 
